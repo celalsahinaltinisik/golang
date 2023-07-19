@@ -34,7 +34,7 @@ func Routeing() http.HandlerFunc {
 
 		// controller.Publish(w, r)
 		m := controller.Functions{}
-		Call(m, funcName, w, r) //Daha iyi yöntem lazım
+		Call(m, funcName, w, r) ////todo
 	}
 }
 

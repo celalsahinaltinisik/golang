@@ -22,6 +22,11 @@ func (m Functions) Home(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintln(w, "home")
 	log.Println(r.Body)
 }
+func (m Functions) Consume(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintln(w, "consume")
+	rabbit := rabbitmqconnect.RabbitMQ{QueueName: "defaultqueuue"}
+	rabbit.Consume()
+}
 
 func (m Functions) Publish(w http.ResponseWriter, r *http.Request) {
 
